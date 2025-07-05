@@ -3,196 +3,714 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>XX | Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-  <link rel="icon" href="logo3.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Alex Chen | Data Scientist & AI Engineer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
-    /* Add custom modern styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Inter', sans-serif;
-    }
-    .btn-primary {
-      background: linear-gradient(90deg, #667eea, #764ba2);
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 0.5rem;
-      transition: all 0.3s ease-in-out;
-    }
-    .btn-primary:hover {
-      background: linear-gradient(90deg, #764ba2, #667eea);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    
-    /* Smooth scrolling */
-    html {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #1a1a1a;
+      background: #fafafa;
       scroll-behavior: smooth;
     }
-    
-    /* Fix for sticky header overlap - add scroll margin to all sections */
+
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      padding: 1rem 0;
+    }
+
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #2563eb;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #6b7280;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.1)" points="0,1000 1000,0 1000,1000"/></svg>');
+      background-size: cover;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .hero .subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+
+    .hero .description {
+      font-size: 1.1rem;
+      margin-bottom: 3rem;
+      opacity: 0.8;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-2px);
+    }
+
+    /* Section Styles */
     section {
+      padding: 3rem 0;
       scroll-margin-top: 80px;
     }
-    
-    /* Remove conflicting styles */
-    .no-overlap {
-      padding-top: 2rem;
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: #1f2937;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #6b7280;
+      margin-bottom: 3rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* About Section */
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-text {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #4b5563;
+    }
+
+    .about-text h3 {
+      color: #1f2937;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .about-text p {
+      margin-bottom: 1.5rem;
+    }
+
+    .about-image {
+      width: 90%;
+      height: 90%;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 20px;
+      display: flex;
+      align-items: right;
+      justify-content: center;
+      font-size: 10rem;
+      color: white;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    /* Projects Section */
+    .projects {
+      background: white;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .project-card {
+      background: #f8fafc;
+      border-radius: 15px;
+      padding: 2rem;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: white;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: #1f2937;
+    }
+
+    .project-card p {
+      color: #6b7280;
+      margin-bottom: 1.5rem;
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tech-tag {
+      background: #e0e7ff;
+      color: #3730a3;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .project-links a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .project-links a:hover {
+      color: #1d4ed8;
+    }
+
+    /* Skills Section */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .skill-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .skill-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: white;
+      margin: 0 auto 1rem;
+    }
+
+    .skill-card h3 {
+      margin-bottom: 1rem;
+      color: #1f2937;
+    }
+
+    .skill-card p {
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+
+    /* Contact Section */
+    .contact {
+      background: #f8fafc;
+    }
+
+    .contact-content {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      border: 1px solid #e2e8f0;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #374151;
+      font-weight: 500;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #2563eb;
+    }
+
+    .btn-submit {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-2px);
+    }
+
+    /* Footer */
+    footer {
+      background: #1f2937;
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .footer-info h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-contact {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .footer-contact a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-contact a:hover {
+      color: #667eea;
+    }
+
+    .footer-bottom {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #374151;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .header-content {
+        padding: 0 1rem;
+      }
+
+      nav ul {
+        gap: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero .subtitle {
+        font-size: 1.2rem;
+      }
+
+      .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .footer-contact {
+        flex-direction: row;
+        gap: 2rem;
+      }
+
+      .projects-grid,
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .container {
+        padding: 0 1rem;
+      }
+
+      .contact-form {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
-<!-- Header -->
-<header class="bg-white shadow-md sticky top-0 z-50">
-    <div class="container mx-auto flex justify-between items-center px-6 py-4">
-      <div class="flex items-center">
-        <img src="logo3.png" alt="Logo" class="h-10 mr-4"> <!-- Replace 'logo.png' with your logo file path -->
-        <h1 class="text-2xl font-bold text-indigo-600">XXX</h1>
-      </div>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <div class="logo"></div>
       <nav>
-        <ul class="flex space-x-6">
-          <li><a href="#about" class="hover:text-indigo-900">About</a></li>
-          <li><a href="#projects" class="hover:text-indigo-900">Projects</a></li>
-          <li><a href="#skills" class="hover:text-indigo-900">Skills</a></li>
-          <li>
-            <span class="bg-indigo-600 text-white px-4 py-2 rounded-lg">
-              <a href="#contact" class="hover:text-indigo-300">Contact</a>
-            </span>
-          </li>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section id="home" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-24">
-    <div class="container mx-auto text-center">
-      <h1 class="text-5xl font-extrabold mb-4" data-aos="fade-up">Hello, I'm XX</h1>
-      <p class="text-lg mb-6" data-aos="fade-up" data-aos-delay="200">
-        Crafting AI Solutions | Building Modern Systems | Empowering the Future
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Mehrdad Rezaei</h1>
+      <p class="subtitle">Data Scientist | AI Engineer</p>
+      <p class="description">
+        Transforming Data into Intelligent Solutions. I specialize in machine learning, artificial intelligence, and data science to help businesses make data-driven decisions and build innovative solutions.
       </p>
-      <a href="#projects" class="btn-primary mt-8">Explore My Work</a>
+      <a href="#projects" class="btn">View My Work</a>
     </div>
   </section>
 
-  <!-- About Me Section -->
-  <section id="about" class="py-16">
-    <div class="container mx-auto text-center">
-      <h2 class="text-4xl font-bold mb-8" data-aos="fade-up">About Me</h2>
-      <div class="flex flex-wrap items-center justify-center gap-12">
-        <img src="profile-image.jpg" alt="XX's Photo" class="w-40 h-40 rounded-full shadow-lg" data-aos="fade-right">
-        <p class="max-w-xl text-gray-600" data-aos="fade-left">
-          As a passionate data scientist, I specialize in AI, machine learning, and system optimization. 
-          My mission is to create impactful solutions that transform data into meaningful insights.
-        </p>
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <h3>Passionate Data Scientist</h3>
+          <p>
+            With over 5 years of experience in machine learning and artificial intelligence, I specialize in transforming complex datasets into actionable insights that drive business success.
+          </p>
+          <p>
+            My expertise spans across deep learning, computer vision, natural language processing, and large-scale data systems. I'm passionate about creating innovative solutions that make a real impact.
+          </p>
+        </div>
+        <div class="about-image">
+          <img src="img_12.png" alt="Alex Chen - Data Scientist & AI Engineer" />
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="py-16 bg-gray-100">
-    <div class="container mx-auto">
-      <h2 class="text-4xl font-bold text-center mb-8" data-aos="fade-up">Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Project Card -->
-        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition" data-aos="fade-up">
-          <h3 class="text-xl font-semibold mb-2">Microgrid Optimization</h3>
-          <p class="text-gray-600 mb-4">Optimized energy systems using Python and Reinforcement Learning.</p>
-          <a href="#" class="text-indigo-600 font-bold hover:underline">Repo</a> | <a href="#" class="text-indigo-600 font-bold hover:underline">Live Demo</a>
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-subtitle">Explore my latest work in AI, machine learning, and data science</p>
+      
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-icon">🔋</div>
+          <h3>Smart Microgrid AI</h3>
+          <p>Advanced reinforcement learning system for optimizing energy distribution in microgrids, achieving 30% efficiency improvement.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">TensorFlow</span>
+            <span class="tech-tag">RL</span>
+          </div>
+          <div class="project-links">
+            <a href="#">View Code</a>
+            <a href="#">Live Demo</a>
+          </div>
         </div>
-        <!-- Project Card -->
-        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
-          <h3 class="text-xl font-semibold mb-2">Solar Forecasting</h3>
-          <p class="text-gray-600 mb-4">Predicted solar panel output using machine learning models.</p>
-          <a href="#" class="text-indigo-600 font-bold hover:underline">Repo</a> | <a href="#" class="text-indigo-600 font-bold hover:underline">Live Demo</a>
+
+        <div class="project-card">
+          <div class="project-icon">📊</div>
+          <h3>Predictive Analytics Platform</h3>
+          <p>Real-time forecasting system using ensemble methods and time series analysis, serving 10M+ daily predictions.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Apache Spark</span>
+            <span class="tech-tag">MLflow</span>
+          </div>
+          <div class="project-links">
+            <a href="#">View Code</a>
+            <a href="#">Live Demo</a>
+          </div>
         </div>
-        <!-- Project Card -->
-        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="text-xl font-semibold mb-2">Energy Analytics</h3>
-            <p class="text-gray-600 mb-4">Analyzed energy consumption patterns using big data techniques.</p>
-            <a href="#" class="text-indigo-600 font-bold hover:underline">Repo</a> | <a href="#" class="text-indigo-600 font-bold hover:underline">Live Demo</a>
+
+        <div class="project-card">
+          <div class="project-icon">🤖</div>
+          <h3>Computer Vision AI</h3>
+          <p>Deep learning model for industrial quality control using YOLOv8 and custom CNN architectures.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">PyTorch</span>
+            <span class="tech-tag">OpenCV</span>
+            <span class="tech-tag">CUDA</span>
+          </div>
+          <div class="project-links">
+            <a href="#">View Code</a>
+            <a href="#">Live Demo</a>
+          </div>
         </div>
-        <!-- Project Card -->
-        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="text-xl font-semibold mb-2">Smart Grid AI</h3>
-            <p class="text-gray-600 mb-4">Developed AI models for intelligent power distribution systems.</p>
-            <a href="#" class="text-indigo-600 font-bold hover:underline">Repo</a> | <a href="#" class="text-indigo-600 font-bold hover:underline">Live Demo</a>
+
+        <div class="project-card">
+          <div class="project-icon">🧠</div>
+          <h3>NLP Sentiment Engine</h3>
+          <p>Advanced sentiment analysis system using transformer models, processing 1M+ social media posts daily.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">BERT</span>
+            <span class="tech-tag">Hugging Face</span>
+            <span class="tech-tag">FastAPI</span>
+          </div>
+          <div class="project-links">
+            <a href="#">View Code</a>
+            <a href="#">Live Demo</a>
+          </div>
         </div>
-        <!-- Project Card -->
-        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="text-xl font-semibold mb-2">Predictive Maintenance</h3>
-            <p class="text-gray-600 mb-4">Built ML models to predict equipment failures in industrial settings.</p>
-            <a href="#" class="text-indigo-600 font-bold hover:underline">Repo</a> | <a href="#" class="text-indigo-600 font-bold hover:underline">Live Demo</a>
+
+        <div class="project-card">
+          <div class="project-icon">📈</div>
+          <h3>Financial Risk Predictor</h3>
+          <p>Machine learning model for credit risk assessment using ensemble methods and feature engineering techniques.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Scikit-learn</span>
+            <span class="tech-tag">XGBoost</span>
+            <span class="tech-tag">Pandas</span>
+          </div>
+          <div class="project-links">
+            <a href="#">View Code</a>
+            <a href="#">Live Demo</a>
+          </div>
         </div>
-        <!-- Project Card -->
-        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
-            <h3 class="text-xl font-semibold mb-2">Climate Data Analysis</h3>
-            <p class="text-gray-600 mb-4">Analyzed climate data to understand environmental trends and patterns.</p>
-            <a href="#" class="text-indigo-600 font-bold hover:underline">Repo</a> | <a href="#" class="text-indigo-600 font-bold hover:underline">Live Demo</a>
+
+        <div class="project-card">
+          <div class="project-icon">🎯</div>
+          <h3>Recommendation System</h3>
+          <p>Collaborative filtering recommendation engine built with deep learning for personalized content delivery.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">TensorFlow</span>
+            <span class="tech-tag">Keras</span>
+            <span class="tech-tag">MongoDB</span>
+          </div>
+          <div class="project-links">
+            <a href="#">View Code</a>
+            <a href="#">Live Demo</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="py-16">
-    <div class="container mx-auto text-center">
-      <h2 class="text-4xl font-bold mb-8" data-aos="fade-up">Skills</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div class="p-4" data-aos="fade-up">
-          <h3 class="text-lg font-semibold">Languages</h3>
-          <p class="text-gray-600">Python, SQL, MATLAB</p>
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">💻</div>
+          <h3>Programming</h3>
+          <p>Python, R, SQL, Java, JavaScript</p>
         </div>
-        <div class="p-4" data-aos="fade-up" data-aos-delay="100">
-          <h3 class="text-lg font-semibold">Libraries</h3>
-          <p class="text-gray-600">Pandas, NumPy, TensorFlow</p>
+        <div class="skill-card">
+          <div class="skill-icon">🧠</div>
+          <h3>Machine Learning</h3>
+          <p>TensorFlow, PyTorch, Scikit-learn, XGBoost</p>
         </div>
-        <div class="p-4" data-aos="fade-up" data-aos-delay="200">
-          <h3 class="text-lg font-semibold">Tools</h3>
-          <p class="text-gray-600">Docker, Apache Spark</p>
+        <div class="skill-card">
+          <div class="skill-icon">📊</div>
+          <h3>Data Analysis</h3>
+          <p>Pandas, NumPy, Matplotlib, Seaborn</p>
         </div>
-        <div class="p-4" data-aos="fade-up" data-aos-delay="300">
-          <h3 class="text-lg font-semibold">Specialized Knowledge</h3>
-          <p class="text-gray-600">Deep Learning, RL</p>
+        <div class="skill-card">
+          <div class="skill-icon">☁️</div>
+          <h3>Cloud & DevOps</h3>
+          <p>AWS, Azure, Docker, Kubernetes</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-16 bg-gray-100">
-    <div class="container mx-auto">
-      <h2 class="text-4xl font-bold text-center mb-8" data-aos="fade-up">Get in Touch</h2>
-      <div class="bg-white p-8 rounded-lg shadow-md max-w-lg mx-auto">
-        <form class="space-y-4" data-aos="fade-up">
-          <input type="text" placeholder="Your Name" class="w-full p-4 border rounded-lg">
-          <input type="email" placeholder="Your Email" class="w-full p-4 border rounded-lg">
-          <textarea rows="4" placeholder="Your Message" class="w-full p-4 border rounded-lg"></textarea>
-          <button class="btn-primary w-full">Send Message</button>
-        </form>
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-content">
+        <div class="contact-form">
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Send Message</button>
+          </form>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-4">
-    <div class="container mx-auto text-center">
-      <div class="flex justify-center space-x-6 mt-2">
-        <a href="https://github.com/yourusername" target="_blank" class="hover:text-indigo-400">
-          <i class="fab fa-github fa-2x"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="hover:text-indigo-400">
-          <i class="fab fa-linkedin fa-2x"></i>
-        </a>
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>Alex Chen</h3>
+          <p>Data Scientist & AI Engineer</p>
+        </div>
+        <div class="footer-contact">
+          <a href="https://github.com/alexchen" target="_blank">
+            <i class="fab fa-github fa-2x"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/alexchen" target="_blank">
+            <i class="fab fa-linkedin fa-2x"></i>
+          </a>
+          <a href="mailto:alex.chen@example.com">
+            <i class="fas fa-envelope fa-2x"></i>
+          </a>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Alex Chen. All rights reserved.</p>
+        </div>
       </div>
     </div>
   </footer>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
 </body>
 </html>
