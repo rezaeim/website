@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mehrdad | Portfolio</title>
+  <title>XX | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <link rel="icon" href="logo3.png" type="image/png">
@@ -25,6 +25,21 @@
       transform: translateY(-2px);
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
+    
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Fix for sticky header overlap - add scroll margin to all sections */
+    section {
+      scroll-margin-top: 80px;
+    }
+    
+    /* Remove conflicting styles */
+    .no-overlap {
+      padding-top: 2rem;
+    }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -34,12 +49,12 @@
     <div class="container mx-auto flex justify-between items-center px-6 py-4">
       <div class="flex items-center">
         <img src="logo3.png" alt="Logo" class="h-10 mr-4"> <!-- Replace 'logo.png' with your logo file path -->
-        <h1 class="text-2xl font-bold text-indigo-600">Mehrdad Rezaei</h1>
+        <h1 class="text-2xl font-bold text-indigo-600">XXX</h1>
       </div>
       <nav>
         <ul class="flex space-x-6">
-          <li><a href="#about" class="hover:text-indigo-1900">About</a></li>
-          <li><a href="#projects" class="hover:text-indigo-1900">Projects</a></li>
+          <li><a href="#about" class="hover:text-indigo-900">About</a></li>
+          <li><a href="#projects" class="hover:text-indigo-900">Projects</a></li>
           <li><a href="#skills" class="hover:text-indigo-900">Skills</a></li>
           <li>
             <span class="bg-indigo-600 text-white px-4 py-2 rounded-lg">
@@ -54,11 +69,11 @@
   <!-- Hero Section -->
   <section id="home" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-24">
     <div class="container mx-auto text-center">
-      <h1 class="text-5xl font-extrabold mb-4" data-aos="fade-up">Hello, I'm Mehrdad</h1>
+      <h1 class="text-5xl font-extrabold mb-4" data-aos="fade-up">Hello, I'm XX</h1>
       <p class="text-lg mb-6" data-aos="fade-up" data-aos-delay="200">
         Crafting AI Solutions | Building Modern Systems | Empowering the Future
       </p>
-      <a href="#projects" class="btn-primary mt-180">Explore My Work</a>
+      <a href="#projects" class="btn-primary mt-8">Explore My Work</a>
     </div>
   </section>
 
@@ -67,7 +82,7 @@
     <div class="container mx-auto text-center">
       <h2 class="text-4xl font-bold mb-8" data-aos="fade-up">About Me</h2>
       <div class="flex flex-wrap items-center justify-center gap-12">
-        <img src="profile-image.jpg" alt="Mehrdad's Photo" class="w-40 h-40 rounded-full shadow-lg" data-aos="fade-right">
+        <img src="profile-image.jpg" alt="XX's Photo" class="w-40 h-40 rounded-full shadow-lg" data-aos="fade-right">
         <p class="max-w-xl text-gray-600" data-aos="fade-left">
           As a passionate data scientist, I specialize in AI, machine learning, and system optimization. 
           My mission is to create impactful solutions that transform data into meaningful insights.
@@ -94,27 +109,27 @@
           <a href="#" class="text-indigo-600 font-bold hover:underline">Repo</a> | <a href="#" class="text-indigo-600 font-bold hover:underline">Live Demo</a>
         </div>
         <!-- Project Card -->
-        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="text-xl font-semibold mb-2">Solar Forecasting</h3>
-            <p class="text-gray-600 mb-4">Predicted solar panel output using machine learning models.</p>
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="text-xl font-semibold mb-2">Energy Analytics</h3>
+            <p class="text-gray-600 mb-4">Analyzed energy consumption patterns using big data techniques.</p>
             <a href="#" class="text-indigo-600 font-bold hover:underline">Repo</a> | <a href="#" class="text-indigo-600 font-bold hover:underline">Live Demo</a>
         </div>
         <!-- Project Card -->
         <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="text-xl font-semibold mb-2">Solar Forecasting</h3>
-            <p class="text-gray-600 mb-4">Predicted solar panel output using machine learning models.</p>
+            <h3 class="text-xl font-semibold mb-2">Smart Grid AI</h3>
+            <p class="text-gray-600 mb-4">Developed AI models for intelligent power distribution systems.</p>
             <a href="#" class="text-indigo-600 font-bold hover:underline">Repo</a> | <a href="#" class="text-indigo-600 font-bold hover:underline">Live Demo</a>
         </div>
         <!-- Project Card -->
-        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="text-xl font-semibold mb-2">Solar Forecasting</h3>
-            <p class="text-gray-600 mb-4">Predicted solar panel output using machine learning models.</p>
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="text-xl font-semibold mb-2">Predictive Maintenance</h3>
+            <p class="text-gray-600 mb-4">Built ML models to predict equipment failures in industrial settings.</p>
             <a href="#" class="text-indigo-600 font-bold hover:underline">Repo</a> | <a href="#" class="text-indigo-600 font-bold hover:underline">Live Demo</a>
         </div>
         <!-- Project Card -->
-        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="text-xl font-semibold mb-2">Solar Forecasting</h3>
-            <p class="text-gray-600 mb-4">Predicted solar panel output using machine learning models.</p>
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
+            <h3 class="text-xl font-semibold mb-2">Climate Data Analysis</h3>
+            <p class="text-gray-600 mb-4">Analyzed climate data to understand environmental trends and patterns.</p>
             <a href="#" class="text-indigo-600 font-bold hover:underline">Repo</a> | <a href="#" class="text-indigo-600 font-bold hover:underline">Live Demo</a>
         </div>
       </div>
@@ -147,7 +162,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-16 bg-gray-100">>
+  <section id="contact" class="py-16 bg-gray-100">
     <div class="container mx-auto">
       <h2 class="text-4xl font-bold text-center mb-8" data-aos="fade-up">Get in Touch</h2>
       <div class="bg-white p-8 rounded-lg shadow-md max-w-lg mx-auto">
