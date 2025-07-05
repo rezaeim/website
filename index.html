@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mehrdad | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="icon" href="logo3.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Add custom modern styles */
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .btn-primary {
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      transition: all 0.3s ease-in-out;
+    }
+    .btn-primary:hover {
+      background: linear-gradient(90deg, #764ba2, #667eea);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<!-- Header -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <div class="flex items-center">
+        <img src="logo3.png" alt="Logo" class="h-10 mr-4"> <!-- Replace 'logo.png' with your logo file path -->
+        <h1 class="text-2xl font-bold text-indigo-600">Mehrdad Rezaei</h1>
+      </div>
+      <nav>
+        <ul class="flex space-x-6">
+          <li><a href="#about" class="hover:text-indigo-1900">About</a></li>
+          <li><a href="#projects" class="hover:text-indigo-1900">Projects</a></li>
+          <li><a href="#skills" class="hover:text-indigo-900">Skills</a></li>
+          <li>
+            <span class="bg-indigo-600 text-white px-4 py-2 rounded-lg">
+              <a href="#contact" class="hover:text-indigo-300">Contact</a>
+            </span>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-24">
+    <div class="container mx-auto text-center">
+      <h1 class="text-5xl font-extrabold mb-4" data-aos="fade-up">Hello, I'm Mehrdad</h1>
+      <p class="text-lg mb-6" data-aos="fade-up" data-aos-delay="200">
+        Crafting AI Solutions | Building Modern Systems | Empowering the Future
+      </p>
+      <a href="#projects" class="btn-primary mt-180">Explore My Work</a>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="py-16">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-8" data-aos="fade-up">About Me</h2>
+      <div class="flex flex-wrap items-center justify-center gap-12">
+        <img src="profile-image.jpg" alt="Mehrdad's Photo" class="w-40 h-40 rounded-full shadow-lg" data-aos="fade-right">
+        <p class="max-w-xl text-gray-600" data-aos="fade-left">
+          As a passionate data scientist, I specialize in AI, machine learning, and system optimization. 
+          My mission is to create impactful solutions that transform data into meaningful insights.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-16 bg-gray-100">
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-8" data-aos="fade-up">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project Card -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition" data-aos="fade-up">
+          <h3 class="text-xl font-semibold mb-2">Microgrid Optimization</h3>
+          <p class="text-gray-600 mb-4">Optimized energy systems using Python and Reinforcement Learning.</p>
+          <a href="#" class="text-indigo-600 font-bold hover:underline">Repo</a> | <a href="#" class="text-indigo-600 font-bold hover:underline">Live Demo</a>
+        </div>
+        <!-- Project Card -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-xl font-semibold mb-2">Solar Forecasting</h3>
+          <p class="text-gray-600 mb-4">Predicted solar panel output using machine learning models.</p>
+          <a href="#" class="text-indigo-600 font-bold hover:underline">Repo</a> | <a href="#" class="text-indigo-600 font-bold hover:underline">Live Demo</a>
+        </div>
+        <!-- Project Card -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="text-xl font-semibold mb-2">Solar Forecasting</h3>
+            <p class="text-gray-600 mb-4">Predicted solar panel output using machine learning models.</p>
+            <a href="#" class="text-indigo-600 font-bold hover:underline">Repo</a> | <a href="#" class="text-indigo-600 font-bold hover:underline">Live Demo</a>
+        </div>
+        <!-- Project Card -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="text-xl font-semibold mb-2">Solar Forecasting</h3>
+            <p class="text-gray-600 mb-4">Predicted solar panel output using machine learning models.</p>
+            <a href="#" class="text-indigo-600 font-bold hover:underline">Repo</a> | <a href="#" class="text-indigo-600 font-bold hover:underline">Live Demo</a>
+        </div>
+        <!-- Project Card -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="text-xl font-semibold mb-2">Solar Forecasting</h3>
+            <p class="text-gray-600 mb-4">Predicted solar panel output using machine learning models.</p>
+            <a href="#" class="text-indigo-600 font-bold hover:underline">Repo</a> | <a href="#" class="text-indigo-600 font-bold hover:underline">Live Demo</a>
+        </div>
+        <!-- Project Card -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="text-xl font-semibold mb-2">Solar Forecasting</h3>
+            <p class="text-gray-600 mb-4">Predicted solar panel output using machine learning models.</p>
+            <a href="#" class="text-indigo-600 font-bold hover:underline">Repo</a> | <a href="#" class="text-indigo-600 font-bold hover:underline">Live Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-16">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-8" data-aos="fade-up">Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="p-4" data-aos="fade-up">
+          <h3 class="text-lg font-semibold">Languages</h3>
+          <p class="text-gray-600">Python, SQL, MATLAB</p>
+        </div>
+        <div class="p-4" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-lg font-semibold">Libraries</h3>
+          <p class="text-gray-600">Pandas, NumPy, TensorFlow</p>
+        </div>
+        <div class="p-4" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-lg font-semibold">Tools</h3>
+          <p class="text-gray-600">Docker, Apache Spark</p>
+        </div>
+        <div class="p-4" data-aos="fade-up" data-aos-delay="300">
+          <h3 class="text-lg font-semibold">Specialized Knowledge</h3>
+          <p class="text-gray-600">Deep Learning, RL</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-gray-100">>
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-8" data-aos="fade-up">Get in Touch</h2>
+      <div class="bg-white p-8 rounded-lg shadow-md max-w-lg mx-auto">
+        <form class="space-y-4" data-aos="fade-up">
+          <input type="text" placeholder="Your Name" class="w-full p-4 border rounded-lg">
+          <input type="email" placeholder="Your Email" class="w-full p-4 border rounded-lg">
+          <textarea rows="4" placeholder="Your Message" class="w-full p-4 border rounded-lg"></textarea>
+          <button class="btn-primary w-full">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto text-center">
+      <div class="flex justify-center space-x-6 mt-2">
+        <a href="https://github.com/yourusername" target="_blank" class="hover:text-indigo-400">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="hover:text-indigo-400">
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
